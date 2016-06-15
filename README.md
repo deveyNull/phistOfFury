@@ -16,42 +16,43 @@ So what is this?
 This is a mature proof of concept python library that can be applied to any problem related to fuzzy image matching. It is meant to demonstrate the power of perceptual hashing, coupled with my wildly non-proprietary block mean based matrix reduction clustering(the secret sauce). Damn that will be a cool paper once I write it. It is intended to be thrown on top of existing frameworks to replace MD5 checks. It was designed to search a directory of images but is capable of handling real time queries fairly well. 
 
 Applications Include:
->Scraping 
->>    Social Media
->>    Websites
->Forensics
->De-Duplication
->Whitelisting
->Upload Checking
->>    Social Media
->>    Cloud Sharing
->Identifying phising landing pages (shouts to wik)
->Video Screenshotting
+* Scraping 
+  *    Social Media
+  *   Websites
+* Forensics
+* De-Duplication
+* Whitelisting
+* Upload Checking
+  *   Social Media
+  *   Cloud Sharing
+* Identifying phising landing pages (shouts to wik)
+* Video Screenshotting
 
 Limitations Include:
->Crops 
->>    Breaks everything perceptual hashes rely on
->Rotations and Reflections:
->>    Trivial to rotate/reflect image and requery
->>    Hashes are binary arrays, should be able to implement rotation/reflection at that level
->Major Edits
+* Crops 
+  *    Breaks everything perceptual hashes rely on
+* Rotations and Reflections:
+  *    Trivial to rotate/reflect image and requery
+  *    Hashes are binary arrays, should be able to implement rotation/reflection at that level
+* Major Edits
 
 Practical Limitations Include:
->Proof of Concept, Written in Python
->>    Nuff Said.
->Speed/Size Tradeoff
->>    I went for speed. Hashtables required are extensive. 
->"Database" is a flat file which I serialize and re-load as needed
->>    If anyone can think of a better way to do this, let me know
+* Proof of Concept, Written in Python
+  *    Nuff Said.
+* Speed/Size Tradeoff
+  *    I went for speed. Hashtables required are extensive. 
+* "Database" is a flat file which I serialize and re-load as needed
+  *   If anyone can think of a better way to do this, let me know
     
 Future Development:
->Baselining and testing
->Add the ability to update a temporary db alongside primary db and query both
->Implement k-d trees in buckets instead of lists
->Get more people using this
->> Tell your friends
+* Baselining and testing
+* Add the ability to update a temporary db alongside primary db and query both
+* Implement k-d trees in buckets instead of lists
+* Get more people using this
+  * Tell your friends
 
 This is a side-project, a labor of love, but it's a damn good time.
+Email me at <html>d.m.devey@gmail.com</html> if you have any questions or comments.
 
 ###Quick description of each file:
 
