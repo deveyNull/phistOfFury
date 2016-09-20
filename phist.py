@@ -7,6 +7,7 @@
 #                             As Written By MIDN Dennis Devey
 #                                                 29 Mar 2016
 #
+#                             Dennis Devey (C) 2016, BSD license
 ###################################################################
 
 """ This tool is written to be run with Python 3.x in Ubuntu 14.04 """
@@ -338,14 +339,11 @@ Function bloat will return.
 """
 These are the requisite functions for turning images into hexadecimal strings.
 My implementation was based off of Johannes Buchner's ImageHash, located at https://github.com/JohannesBuchner/imagehash
-His implementation was forked off of PhotoHash, https://github.com/bunchesofdonald/photohash
-
-My average hash function differs greatly from it's predecessors, everything else is essentially the same.
 
 The length of the hashes returned is entirely arbitrary. Change them as you like, though you have to make sure that the numpy.reshape will still work.
 
 """
-
+# Johannes Buchner (C) 2013-2015, BSD license
 def average_hash(image, hash_size=10):
     """
     Average Hash Computation Implementation follows http://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html
