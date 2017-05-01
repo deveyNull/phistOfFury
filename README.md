@@ -1,7 +1,7 @@
 # p.h.i.s.t.
-##Perceptual Hashing Image Similarity Tool
+## Perceptual Hashing Image Similarity Tool
 
-###What is perceptual hashing?
+### What is perceptual hashing?
 
 MD5 sucks for identifying similar images. This is a fact.
 
@@ -14,11 +14,11 @@ My method of storing the database allows a constant time lookup for ~17 million 
 What this all means is that my method can find similar images at scale significantly faster than any other method. If you disagree with this statement, please let me know. 
 Of course, this is in python, so don't expect the hashing function to be anywhere as fast as something written in assembly. p.h.i.s.t. makes its money on the database lookup, not the hash function.
 
-###So what can I use this for?
+### So what can I use this for?
 
 This is a mature proof of concept python library that can be applied to any problem related to fuzzy image matching. It is meant to demonstrate the power of perceptual hashing, coupled with my wildly non-proprietary block mean based matrix reduction clustering. The clustering is the secret sauce, let me know if you need me to explain how it works, and yes, I will write the paper eventually. p.h.i.s.t. is intended to be thrown on top of existing frameworks to replace MD5 checks. It was designed to search a directory of images but is capable of handling real time queries fairly well. 
 
-###Applications Include:
+### Applications Include:
 * Scraping 
   *    Social Media
   *   Websites
@@ -31,7 +31,7 @@ This is a mature proof of concept python library that can be applied to any prob
 * Identifying phising landing pages (shouts to wik)
 * Video Screenshotting
 
-###Limitations Include:
+### Limitations Include:
 * Crops 
   *    Breaks everything perceptual hashes rely on
 * Rotations and Reflections:
@@ -39,7 +39,7 @@ This is a mature proof of concept python library that can be applied to any prob
   *    Hashes are binary arrays, should be able to implement rotation/reflection at that level
 * Major Edits
 
-###Practical Limitations Include:
+### Practical Limitations Include:
 * Proof of Concept, Written in Python
   *    'Nuff Said.
 * Speed/Size Tradeoff
@@ -47,19 +47,19 @@ This is a mature proof of concept python library that can be applied to any prob
 * "Database" is a flat file which I serialize and re-load as needed
   *   If anyone can think of a better way to do this, let me know
     
-###Future Development:
+### Future Development:
 * Implement k-d trees in buckets instead of lists
   * This is where we increase our constant time lookup to 170 million images. 
 * Baselining and testing
 * Add the ability to update a temporary db alongside primary db and query both
 * 
-##Let's get more people using this!
+## Let's get more people using this!
 
-####Author's note:
+#### Author's note:
 This is a side-project, a labor of love, but it was a damn good time figuring out how to turn perceptual hashing into something we can use to solve problems in the real world.
 Email me at <html>d.m.devey@gmail.com</html> if you have any questions or comments.
 
-###Quick description of each file:
+### Quick description of each file:
 
 **phist.py** = The guts of the tool, an absolute pile of functions that make everything else work
 
